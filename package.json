@@ -1,0 +1,29 @@
+{
+  "name": "latch-wallet",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"node server/index.js\" \"vite\"",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "test:wallet": "node scripts/test-derivation.mjs"
+  },
+  "dependencies": {
+    "@noble/curves": "^1.8.1",
+    "@noble/hashes": "^1.7.1",
+    "@scure/base": "^1.2.4",
+    "ethers": "^6.13.5",
+    "express": "^4.21.2",
+    "gsap": "^3.12.7",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.172.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "vite": "^6.0.11"
+  }
+}
